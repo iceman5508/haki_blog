@@ -3,7 +3,7 @@
     <div class="container mx-auto flex items-center">
         <div class="flex text-white font-extrabold">
             <a class="flex text-white text-base no-underline hover:text-white hover:no-underline" href="#">
-                👻 <span class="hidden w-0 md:w-auto md:block pl-1">Ghostwind CSS</span>
+                 <span class="hidden w-0 md:w-auto md:block pl-1"> {{config('site.Name')}}</span>
             </a>
         </div>
         <div class="flex pl-4 text-sm">

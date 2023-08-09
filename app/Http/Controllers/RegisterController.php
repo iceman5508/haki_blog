@@ -8,6 +8,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
@@ -39,6 +40,10 @@ class RegisterController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+
+        if(config('site.AdminPass') !== $request->input('admin_password')){
+            return redirect()->back();
+        }
 
       $status =   $request->validate([
             'name' => 'required|string|max:255',

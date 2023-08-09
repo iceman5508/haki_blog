@@ -20,9 +20,9 @@
     <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
         <!--Title-->
         <p class="text-white font-extrabold text-3xl md:text-5xl">
-            👻 Ghostwind CSS
+            {{config('site.Name')}}
         </p>
-        <p class="text-xl md:text-2xl text-gray-500">Welcome to my Blog</p>
+        <p class="text-xl md:text-2xl text-gray-500">{{config('site.Slogan')}}</p>
     </div>
 </div>
 
@@ -46,7 +46,7 @@
                         </li>
                         <li class="mr-2">
                             <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
-                               href="{{route('login.form')}}">Login</a>
+                               href="{{route('login.form')}}">Admin</a>
                         </li>
                     </ul>
                 </div>
