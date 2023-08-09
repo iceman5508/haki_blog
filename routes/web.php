@@ -21,8 +21,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PublicViewController::class, 'index'])->name('home');
+Route::get('/posts', [PublicViewController::class, 'allPosts'])->name('posts');
 Route::get('/posts/{post}', [PublicViewController::class, 'show'])->name('post');
 Route::post('/posts/{post}/comment', [PublicViewController::class, 'store'])->name('post.comment');
+Route::get('post/search', [PublicViewController::class,'search'])->name('post.search');
 
 Route::post("/logout",[LoginController::class,'logout'])->name('logout');
 

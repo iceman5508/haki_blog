@@ -63,4 +63,40 @@ class PublicViewController extends Controller
 
         return back()->with("success","Success! Your Comment will be live after verification by admin");
     }
+
+    /**
+     * Return all posts
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function allPosts(){
+       $posts =  PostsModel::where('active', 1)->get();
+        return view('public.pages.post', compact('posts'));
+    }
+
+
+    /**
+     * @param Request $request
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function search(Request $request)
+    {
+        $query = new PostsModel();
+
+        if ($request->search_str) {
+
+            $query = $query->where('title', 'like', "%$request[search_str]%")
+                ->orWhereHas('tags', function ($q) use ($request) {
+                    $q->where('name', '=', "$request[search_str]");
+                });
+        }
+
+        $posts = $query->paginate(10);
+
+
+        //$data['search_str'] =$request->search_str;
+
+
+        return view('public.pages.post', compact('posts') );
+
+    }
 }
