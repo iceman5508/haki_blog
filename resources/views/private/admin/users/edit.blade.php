@@ -1,4 +1,4 @@
-@extends('layouts.admin.template')
+@extends('common.admin.template')
 
 @section('content')
     <div class="row">

@@ -19,12 +19,16 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::fallback(function () {
+    return redirect('/');
+});
 
 Route::get('/', [PublicViewController::class, 'index'])->name('home');
 Route::get('/posts', [PublicViewController::class, 'allPosts'])->name('posts');
 Route::get('/posts/{post}', [PublicViewController::class, 'show'])->name('post');
 Route::post('/posts/{post}/comment', [PublicViewController::class, 'store'])->name('post.comment');
 Route::get('post/search', [PublicViewController::class,'search'])->name('post.search');
+Route::get('/comments/{post}', [PublicViewController::class,'comments'])->name('comments');
 
 Route::post("/logout",[LoginController::class,'logout'])->name('logout');
 
@@ -44,7 +48,7 @@ Route::prefix('admin')->group(function () {
     Route::middleware(['auth'])->group(function () {
 
         Route::get('/posts', [PostController::class, 'index'])->name('admin.posts');
-        Route::prefix('/post')->group(function () {
+        Route::prefix('/posts')->group(function () {
             Route::get('/create', [PostController::class, 'show'])->name('admin.posts.show');
             Route::post('/create', [PostController::class, 'store'])->name('admin.posts.store');
             Route::get('/{post}/edit', [PostController::class, 'edit'])->name('admin.posts.edit')->whereNumber('post');

@@ -1,4 +1,4 @@
-@extends('layouts.admin.template')
+@extends('common.admin.template')
 @section('content')
     <div class="row">
         <div class="col-lg-12">
@@ -45,4 +45,4 @@
         </div>
 
     </div>
-    @endsection
+@endsection

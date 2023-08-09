@@ -21,6 +21,12 @@
 
     </div>
 
+    <div class="w-full flex flex-col">
+        <h5 class="ml-6 mt-4 text-lg"> Currently Viewing: @if(!isset($search_str))  All Posts @else {{$search_str}} @endif</h5>
+    </div>
+
+
+
     @foreach($posts as $small_cards => $post)
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
@@ -40,5 +46,9 @@
             {{--                    </div>--}}
         </div>
     @endforeach
+
+    <div class="mx-auto pb-10 w-4/5">
+        {{$posts->links()}}
+    </div>
 
 @endsection

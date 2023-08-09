@@ -44,7 +44,7 @@ class PublicViewController extends Controller
     public function show(Request $request, $slug){
         $post = PostsModel::where([['slug', $slug], ['active', 1]])->first();
         $related_posts = PostsModel::where([['category_id', $post->category_id], ['active', 1], ['id', '!=', $post->id]])->take(3)->get();
-        $post_comments = $post->comments->where('active', 1)->all();
+        $post_comments = $post->comments()->where('active', 1)->paginate(5);
         return view('public.pages.posts', ['post' => $post, 'related_posts' => $related_posts, 'comments' => $post_comments]);
     }
 
@@ -69,7 +69,7 @@ class PublicViewController extends Controller
      * @return Application|Factory|View|\Illuminate\Foundation\Application
      */
     public function allPosts(){
-       $posts =  PostsModel::where('active', 1)->get();
+       $posts =  PostsModel::where('active', 1)->paginate(10);
         return view('public.pages.post', compact('posts'));
     }
 
@@ -93,10 +93,22 @@ class PublicViewController extends Controller
         $posts = $query->paginate(10);
 
 
-        //$data['search_str'] =$request->search_str;
+        $search_str =$request->search_str;
 
 
-        return view('public.pages.post', compact('posts') );
+        return view('public.pages.post', compact('posts', 'search_str' ) );
 
+    }
+
+
+    /**
+     * @param Request $request
+     * @param PostsModel $post
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function comments(Request $request, PostsModel $post){
+
+        $comments = $post->comments()->where('active', 1)->paginate(5);
+        return view('public.pages.comments', ['post' => $post, 'comments' => $comments]);
     }
 }
