@@ -149,23 +149,7 @@
         <!--/comments--->
 
         <!--Subscribe-->
-        <div class="container font-sans bg-green-100 rounded mt-8 p-4 md:p-24 text-center">
-            <h2 class="font-bold break-normal text-2xl md:text-4xl">Subscribe to Ghostwind CSS</h2>
-            <h3 class="font-bold break-normal font-normal text-gray-600 text-base md:text-xl">Get the latest posts
-                delivered right to your inbox</h3>
-            <div class="w-full text-center pt-4">
-                <form action="#">
-                    <div class="max-w-sm mx-auto p-1 pr-0 flex flex-wrap items-center">
-                        <input type="email" placeholder="youremail@example.com"
-                               class="flex-1 appearance-none rounded shadow p-3 text-gray-600 mr-2 focus:outline-none">
-                        <button type="submit"
-                                class="flex-1 mt-4 md:mt-0 block md:inline-block appearance-none bg-green-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-green-400">
-                            Subscribe
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
+        @include('common.subscribe')
         <!-- /Subscribe-->
 
 
@@ -208,40 +192,7 @@
 
 </div>
 
-
-<footer class="bg-gray-900">
-    <div class="container max-w-6xl mx-auto flex items-center px-2 py-8">
-
-        <div class="w-full mx-auto flex flex-wrap items-center">
-            <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
-                <a class="text-gray-900 no-underline hover:text-gray-900 hover:no-underline" href="#">
-                    👻 <span class="text-base text-gray-200">Ghostwind CSS</span>
-                </a>
-            </div>
-            <div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
-                <ul class="list-reset flex justify-center flex-1 md:flex-none items-center">
-                    <li>
-                        <a class="inline-block py-2 px-3 text-white no-underline" href="index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3"
-                           href="#">link</a>
-                    </li>
-                    <li>
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3"
-                           href="#">link</a>
-                    </li>
-                    <li>
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3"
-                           href="#">link</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-    </div>
-</footer>
+@include('common.footer')
 
 
 <script>
