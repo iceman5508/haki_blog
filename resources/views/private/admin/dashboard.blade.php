@@ -38,7 +38,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge">{{$num_unread_contact}}</div>
-                            <div>New Subscription Requests!</div>
+                            <div>New Contact Messages!</div>
                         </div>
                     </div>
                 </div>
@@ -49,6 +49,22 @@
                         <div class="clearfix"></div>
                     </div>
                 </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-users fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">{{$subscriber_count}}</div>
+                            <div>Number of Subscribers!</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

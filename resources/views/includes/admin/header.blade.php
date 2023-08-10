@@ -72,7 +72,7 @@
                             <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-phone fa-fw" aria-hidden="true"></i>Subscribers</a>
+                            <a href="#"><i class="fa fa-phone fa-fw" aria-hidden="true"></i>Contact Messages</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-users fa-fw" aria-hidden="true"></i> Users</a>
