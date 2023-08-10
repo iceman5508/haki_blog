@@ -27,4 +27,14 @@ class DashboardController extends Controller
         $data['subscriber_count'] = $subscriber_count;
         return view("private.admin.dashboard",$data);
     }
+
+
+    public function contact(){
+
+    }
+
+
+    public function viewContact(){
+
+    }
 }

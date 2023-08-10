@@ -133,4 +133,31 @@ class PublicViewController extends Controller
         return redirect()->back();
 
     }
+
+
+    /**
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function contact(){
+        return view('public.pages.contact');
+    }
+
+    /**
+     * @param Request $request
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function postContact(Request $request){
+        $this->validate($request, [
+            'name' => 'required|max:200|min:3',
+            'email' => 'required|email',
+            'message' => 'required|max:255',
+        ]);
+        $inputs = $request->all();
+        ContactModel::create($inputs);
+
+        $request->session()->flash('success', 'Your request has been recorded');
+        return view('public.pages.contact');
+    }
+
 }

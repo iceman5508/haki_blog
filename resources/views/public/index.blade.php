@@ -47,6 +47,10 @@
                         </li>
                         <li class="mr-2">
                             <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
+                               href="{{'contact'}}">Contact Us</a>
+                        </li>
+                        <li class="mr-2">
+                            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
                                href="{{route('login.form')}}">Admin</a>
                         </li>
                     </ul>

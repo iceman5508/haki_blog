@@ -12,8 +12,12 @@
                     <a class="inline-block py-2 text-gray-600 px-2 no-underline" href="{{route('home')}}">HOME</a>
                 </li>
                 <li class="mr-2">
-                    <a class="inline-block text-white  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                    <a class="inline-block {{ (request()->is('posts*'))  || (request()->is('comments*'))  ? 'text-white' : 'text-gray-600' }}   no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
                        href="{{route('posts')}}">Posts</a>
+                </li>
+                <li class="mr-2">
+                    <a class="inline-block {{ (request()->is('contact'))  ? 'text-white' : 'text-gray-600' }} no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                       href={{route('contact')}}>Contact Us</a>
                 </li>
                 <li class="mr-2">
                     <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"

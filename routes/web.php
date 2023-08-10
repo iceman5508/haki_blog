@@ -30,7 +30,8 @@ Route::post('/posts/{post}/comment', [PublicViewController::class, 'store'])->na
 Route::get('post/search', [PublicViewController::class,'search'])->name('post.search');
 Route::get('/comments/{post}', [PublicViewController::class,'comments'])->name('comments');
 Route::post('/subscribe', [PublicViewController::class, 'subscribe'])->name('subscribe');
-
+Route::get('/contact', [PublicViewController::class, 'contact'])->name('contact');
+Route::post('/contact', [PublicViewController::class, 'postContact'])->name('contact.post');
 
 
 Route::post("/logout",[LoginController::class,'logout'])->name('logout');
