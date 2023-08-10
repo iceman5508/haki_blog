@@ -12,6 +12,7 @@
 
 
 </head>
+@include('common.flash')
 <body class="bg-gray-200 font-sans leading-normal tracking-normal">
 
 <!--Header-->

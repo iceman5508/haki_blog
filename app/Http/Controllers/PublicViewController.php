@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\CommentsModel;
+use App\Models\ContactModel;
 use App\Models\PostsModel;
+use App\Models\Subscriber;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -110,5 +112,25 @@ class PublicViewController extends Controller
 
         $comments = $post->comments()->where('active', 1)->paginate(5);
         return view('public.pages.comments', ['post' => $post, 'comments' => $comments]);
+    }
+
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function subscribe(Request $request){
+        $subscriber =   $request->validate([
+            'subscriber_email' => 'required|string|email|max:255|unique:subscribers'
+
+        ]);
+
+        $sub  = new Subscriber();
+        $sub->fill($request->all());
+        $sub->save();
+
+        $request->session()->flash('success', 'Successfully Subscribed');
+        return redirect()->back();
+
     }
 }

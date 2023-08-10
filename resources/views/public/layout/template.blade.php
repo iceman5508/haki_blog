@@ -22,7 +22,7 @@
 <body class="bg-gray-200 font-sans leading-normal tracking-normal">
 
 @include('common.top-nav')
-
+@include('common.flash')
 
 <!--Container-->
 <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">

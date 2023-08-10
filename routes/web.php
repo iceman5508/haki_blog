@@ -29,6 +29,9 @@ Route::get('/posts/{post}', [PublicViewController::class, 'show'])->name('post')
 Route::post('/posts/{post}/comment', [PublicViewController::class, 'store'])->name('post.comment');
 Route::get('post/search', [PublicViewController::class,'search'])->name('post.search');
 Route::get('/comments/{post}', [PublicViewController::class,'comments'])->name('comments');
+Route::post('/subscribe', [PublicViewController::class, 'subscribe'])->name('subscribe');
+
+
 
 Route::post("/logout",[LoginController::class,'logout'])->name('logout');
 
