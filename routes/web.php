@@ -32,6 +32,7 @@ Route::get('/comments/{post}', [PublicViewController::class,'comments'])->name('
 Route::post('/subscribe', [PublicViewController::class, 'subscribe'])->name('subscribe');
 Route::get('/contact', [PublicViewController::class, 'contact'])->name('contact');
 Route::post('/contact', [PublicViewController::class, 'postContact'])->name('contact.post');
+Route::get('/about', [PublicViewController::class, 'about'])->name('about');
 
 
 Route::post("/logout",[LoginController::class,'logout'])->name('logout');

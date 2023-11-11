@@ -1,6 +1,6 @@
 @extends('public.layout.template')
 
-@section('title', 'Comments')
+@section('title', 'Contact')
 
 @section('content')
 
