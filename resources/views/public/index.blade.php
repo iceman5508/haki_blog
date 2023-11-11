@@ -9,6 +9,33 @@
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
     @vite(['resources/css/tailwind.css', 'resources/css/animate.css'])
+    <style type="text/css">
+        @font-face {
+            font-family: 'blacksword';
+            src: url("{{asset('fonts/Blacksword.otf')}}");
+        }
+        @font-face {
+            font-family: 'infinite';
+            src: url("{{asset('fonts/Infinite_Stroke.otf')}}");
+        }
+        @font-face {
+            font-family: 'scriptin';
+            src: url("{{asset('fonts/SCRIPTIN.ttf')}}");
+        }
+
+
+        .blacksword {
+            font-family: blacksword;
+        }
+
+        .infinite {
+            font-family: infinite;
+        }
+
+        .scriptin {
+            font-family: scriptin;
+        }
+    </style>
 
 
 </head>
@@ -17,13 +44,13 @@
 
 <!--Header-->
 <div class="w-full m-0 p-0 bg-cover bg-bottom"
-     style="background-image:url('{{asset('images/cover.jpg')}}'); height: 60vh; max-height:460px;">
+     style="background-image:url('{{asset('images/cover1.jpg')}}'); height: 60vh; max-height:460px; ">
     <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
         <!--Title-->
-        <p class="text-white font-extrabold text-3xl md:text-5xl">
+        <p class="text-white font-extrabold text-3xl md:text-5xl infinite">
             {{config('site.Name')}}
         </p>
-        <p class="text-xl md:text-2xl text-gray-500">{{config('site.Slogan')}}</p>
+        <p class="text-xl md:text-2xl text-white">{{config('site.Slogan')}}</p>
     </div>
 </div>
 
