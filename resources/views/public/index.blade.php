@@ -8,7 +8,7 @@
     <meta name="author" content="name">
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
-    @vite(['resources/css/tailwind.css', 'resources/css/animate.css'])
+    @vite(['resources/css/tailwind.css', 'resources/css/animate.css', 'resources/css/app.css'])
     <style type="text/css">
         @font-face {
             font-family: 'blacksword';
@@ -117,7 +117,7 @@
                        class="flex flex-wrap no-underline hover:no-underline">
                         <div class="w-full md:w-2/3 rounded-t">
                             <img src="{{asset($data['featured']->featured_image->medium)}}"
-                                 class="h-full w-full shadow">
+                                 class="h-full w-full shadow" id="featured_blog_img">
                         </div>
 
                         <div class="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
