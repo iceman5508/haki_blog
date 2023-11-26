@@ -363,7 +363,7 @@
                                 <tr>
                                     <td>
                                         <p>Hello</p>
-                                        <p>There is a new comment on your blog post {{$post_name}} from {{$user_name}} ({{$user_email}}) waiting for your approval</p>
+                                        <p>There is a new comment on your blog post, {{$post_name}}, from {{$user_name}} ({{$user_email}}) waiting for your approval</p>
                                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                                             <tbody>
                                             <tr>
