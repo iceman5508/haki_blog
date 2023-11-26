@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NotificationEmail;
 use App\Models\CommentsModel;
 use App\Models\ContactModel;
 use App\Models\PostsModel;
 use App\Models\Subscriber;
+use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PublicViewController extends Controller
 {
@@ -51,6 +54,7 @@ class PublicViewController extends Controller
     }
 
     /**
+     * Create Comment
      * @param Request $request
      * @param PostsModel $post
      * @return \Illuminate\Http\RedirectResponse
@@ -62,6 +66,11 @@ class PublicViewController extends Controller
         $comment->fill($inputs);
         $comment->post_id = $post->id;
         $comment->save();
+
+        $email = $post->user->email;
+
+        Mail::to($email)->send(new NotificationEmail($inputs, $post));
+
 
         return back()->with("success","Success! Your Comment will be live after verification by admin");
     }
