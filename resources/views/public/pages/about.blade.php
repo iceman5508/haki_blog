@@ -26,7 +26,7 @@
                     </p>
                 </div>
                 <div class="w-full lg:w-8/12">
-                    <img class="w-full h-full" src="{{asset('images/logo.webp')}}" alt="Brave Space" />
+                    <img class="w-full h-full" src="{{asset('images/414.svg')}}" alt="Brave Space" />
                 </div>
             </div>
 
