@@ -1,4 +1,4 @@
-@extends('common.admin.template')
+@extends('private.layouts.admin.template')
 
 @section('content')
     <div class="row">
@@ -10,7 +10,7 @@
         <div class="col-md-12">
             @include('includes.admin.alerts')
             {{Form::model($tag, ['route' => ['tags.update', $tag->id],'method'=>'PATCH'])}}
-            @include('admin.tags.form')
+            @include('private.admin.tags.form')
             <div class="form-group text-center">
                 <input type="submit" class="btn btn-primary" value="Save">
             </div>

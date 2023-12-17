@@ -118,19 +118,27 @@
                 multiple: true,
                 quietMillis: 100,
                 ajax: {
-                    url: '{{url('admin/tags-suggest')}}',
+                    url: '{{route('tag-suggest')}}',
                     dataType: 'json',
                     data : function (params) {
                         var query = {
                             search: params.term,
                         }
+
                         return query;
-                        
+
                     },
                     processResults : function (data) {
                         return {
-                            results: data.results
-                        };
+                            results: $.map(data.results, function (item) {
+                                return {
+                                    text: item.name,
+                                    id: item.id
+                                }
+                            })
+                        }
+
+
                     }
                 }
             });

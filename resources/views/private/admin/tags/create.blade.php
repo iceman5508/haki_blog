@@ -1,4 +1,4 @@
-@extends('common.admin.template')
+@extends('private.layouts.admin.template')
 
 
 @section('content')
@@ -11,7 +11,7 @@
         @include('includes.admin.alerts')
         <div class="col-md-12">
             {{Form::open(['url' => route("tags.store"), 'method' => 'POST'])}}
-            @include('admin.tags.form')
+            @include('private.admin.tags.form')
             <div class="form-group text-center">
                 <input type="submit" class="btn btn-primary" value="Save">
             </div>

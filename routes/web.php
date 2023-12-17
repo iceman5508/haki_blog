@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminTagsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
@@ -82,6 +83,10 @@ Route::prefix('admin')->group(function () {
 
 
     });
+
+
+    Route::resource('tags', AdminTagsController::class);
+    Route::get('/tags-suggest',[AdminTagsController::class, 'showTagsSuggestions'])->name('tag-suggest');
 
 
 

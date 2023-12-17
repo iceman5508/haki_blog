@@ -66,7 +66,7 @@
                             <a href="{{route('admin.comments')}}"><i class="fa fa-comments" aria-hidden="true"></i> Comments</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-tags" aria-hidden="true"></i> Tags</a>
+                            <a href="{{route('tags.index')}}"><i class="fa fa-tags" aria-hidden="true"></i> Tags</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a>

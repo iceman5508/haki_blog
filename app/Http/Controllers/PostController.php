@@ -99,7 +99,7 @@ class PostController extends Controller
 
 
         PostsModel::create($inputs);
-        $request->session()->flash('success', 'Post Successfull!');
+        $request->session()->flash('success', 'Post Successfully!');
 
         return redirect("admin/posts");
 
