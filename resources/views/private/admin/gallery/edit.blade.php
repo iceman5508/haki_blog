@@ -1,4 +1,4 @@
-@extends('common.admin.template')
+@extends('private.layouts.admin.template')
 
 @section('content')
     <div class="row">
@@ -11,7 +11,7 @@
             @include('includes.admin.alerts')
 
             {{Form::model($gallery, ['route' => ['gallery.update', $gallery->id],'method'=>'PATCH','files'=>true])}}
-            @include('admin.gallery.form')
+            @include('private.admin.gallery.form')
             <div class="form-group text-center">
                 <input type="submit" class="btn btn-primary" value="Save">
             </div>

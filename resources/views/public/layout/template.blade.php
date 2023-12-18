@@ -8,7 +8,7 @@
     <meta name="author" content="name">
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
-    @vite(['resources/css/tailwind.css', 'resources/css/animate.css'])
+    @vite(['resources/css/tailwind.css', 'resources/css/animate.css', 'resources/css/app.css'])
     <style>
         .smooth {
             transition: box-shadow 0.3s ease-in-out;

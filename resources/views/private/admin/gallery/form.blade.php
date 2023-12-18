@@ -25,7 +25,7 @@
 <div class="form-group{{ $errors->has('image') ? ' has-error ':''}}">
 {{Form::label('image','image * ')}}
     {{Form::file('image',null,array("class"=>"form-control","id"=>"image"))}}
-    <img id="preview_image"   @if(isset($gallery)) src="{{ asset($gallery->image->thumb)}}" @endif class="inputImgPreview" src="" class="img-thumbnail"/>
+    <img id="preview_image"   @if(isset($gallery)) src="{{ asset($gallery->image)}}" @endif class="inputImgPreview" src="" class="img-thumbnail"/>
     @if ($errors->has('image'))
         <span class="help-block">
                 <strong>{{ $errors->first('image') }}</strong>

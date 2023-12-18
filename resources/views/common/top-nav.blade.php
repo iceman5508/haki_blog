@@ -24,6 +24,10 @@
                        href={{route('about')}}>About Us</a>
                 </li>
                 <li class="mr-2">
+                    <a class="inline-block {{ (request()->is('gallery'))  ? 'text-white' : 'text-gray-600' }} no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                       href={{route('gallery')}}>Gallery</a>
+                </li>
+                <li class="mr-2">
                     <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
                        href={{route('login.form')}}>Admin</a>
                 </li>

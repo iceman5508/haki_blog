@@ -19,6 +19,12 @@
                         <a class="inline-block text-white no-underline hover:text-gray-200 hover:underline py-2 px-3" href="{{route('contact')}}">Contact Us</a>
                     </li>
                     <li>
+                        <a class="inline-block text-white no-underline hover:text-gray-200 hover:underline py-2 px-3" href="{{route('about')}}">About Us</a>
+                    </li>
+                    <li>
+                        <a class="inline-block text-white no-underline hover:text-gray-200 hover:underline py-2 px-3" href="{{route('gallery')}}">Gallery</a>
+                    </li>
+                    <li>
                         <a class="inline-block text-white no-underline hover:text-gray-200 hover:underline py-2 px-3" href="{{route('login.form')}}">Admin</a>
                     </li>
                 </ul>

@@ -69,7 +69,7 @@
                             <a href="{{route('tags.index')}}"><i class="fa fa-tags" aria-hidden="true"></i> Tags</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a>
+                            <a href="{{route('gallery.index')}}"><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-phone fa-fw" aria-hidden="true"></i>Contact Messages</a>

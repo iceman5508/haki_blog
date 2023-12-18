@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\AdminGalleryController;
 use App\Http\Controllers\AdminTagsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicViewController;
@@ -24,6 +26,7 @@ Route::fallback(function () {
     return redirect('/');
 });
 
+/******Pubic Routes*****/
 Route::get('/', [PublicViewController::class, 'index'])->name('home');
 Route::get('/posts', [PublicViewController::class, 'allPosts'])->name('posts');
 Route::get('/posts/{post}', [PublicViewController::class, 'show'])->name('post');
@@ -34,10 +37,11 @@ Route::post('/subscribe', [PublicViewController::class, 'subscribe'])->name('sub
 Route::get('/contact', [PublicViewController::class, 'contact'])->name('contact');
 Route::post('/contact', [PublicViewController::class, 'postContact'])->name('contact.post');
 Route::get('/about', [PublicViewController::class, 'about'])->name('about');
-
+Route::get("/gallery",[GalleryController::class,'index'])->name('gallery');
 
 Route::post("/logout",[LoginController::class,'logout'])->name('logout');
 
+/******Admin routes*****/
 Route::prefix('admin')->group(function () {
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -88,6 +92,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('tags', AdminTagsController::class);
     Route::get('/tags-suggest',[AdminTagsController::class, 'showTagsSuggestions'])->name('tag-suggest');
 
+    Route::resource('gallery', AdminGalleryController::class);
 
 
 });
