@@ -1,3 +1,20 @@
+
+
+<div class="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Useful Resources</h5>
+    <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse grid grid-cols-2 gap-4 mt-2 underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
+       <div class="col1 space-y-2">
+           <p><a href="https://www.spica.com/blog/not-to-do-list">Spica</a></p>
+           <p><a href="https://www.happyorganizedlife.com/a-what-not-to-do-list/">Happy Organized Life</a></p>
+
+       </div>
+        <dv class="col2 space-y-2">
+            <p><a href="https://www.netflix.com/title/81280926">Headspace Guide to Meditation</a></p>
+        </dv>
+    </div>
+</div>
+
+
 <footer class="bg-gray-900">
     <div class="container max-w-6xl mx-auto flex items-center px-2 py-8">
 
@@ -11,6 +28,9 @@
                 <ul class="list-reset flex justify-center flex-1 md:flex-none items-center">
                     <li>
                         <a class="inline-block py-2 px-3 text-white no-underline" href="{{route('home')}}">Home</a>
+                    </li>
+                    <li>
+                        <a class="inline-block text-white no-underline hover:text-gray-200 hover:underline py-2 px-3" href="{{route('why')}}">"My Why" Story</a>
                     </li>
                     <li>
                         <a class="inline-block text-white no-underline hover:text-gray-200 hover:underline py-2 px-3" href="{{route('posts')}}">Posts</a>

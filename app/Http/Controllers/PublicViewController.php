@@ -177,4 +177,15 @@ class PublicViewController extends Controller
         return view('public.pages.about');
     }
 
+
+    /**
+     * @param Request $request
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function why(Request $request){
+        return view('public.pages.why');
+    }
+
+
+
 }

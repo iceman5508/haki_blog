@@ -40,7 +40,7 @@
 
 </head>
 @include('common.flash')
-<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+<body class="brav_bg font-sans leading-normal tracking-normal">
 
 <!--Header-->
 <div class="w-full m-0 p-0 bg-cover bg-bottom"
@@ -66,26 +66,30 @@
                 <div class="flex w-1/2 pl-4 text-sm">
                     <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
                         <li class="mr-2">
-                            <a class="inline-block py-2 px-2 text-white no-underline hover:underline" href="{{route('home')}}">Home</a>
+                            <a class="inline-block py-2 px-2 selected_color no-underline hover:underline" href="{{route('home')}}">Home</a>
                         </li>
                         <li class="mr-2">
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
-                               href="{{'posts'}}">Posts</a>
-                        </li>
-                        <li class="mr-2">
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
-                               href="{{'contact'}}">Contact Us</a>
-                        </li>
-                        <li class="mr-2">
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
+                            <a class="inline-block link_color no-underline hover:text-gray-200 hover:underline py-2 px-2"
                                href="{{'about'}}">About Us</a>
                         </li>
                         <li class="mr-2">
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
+                            <a class="inline-block link_color no-underline hover:text-gray-200 hover:underline py-2 px-2"
+                               href="{{'why'}}">"My Why" Story</a>
+                        </li>
+                        <li class="mr-2">
+                            <a class="inline-block link_color no-underline hover:text-gray-200 hover:underline py-2 px-2"
+                               href="{{'posts'}}">Posts</a>
+                        </li>
+                        <li class="mr-2">
+                            <a class="inline-block link_color no-underline hover:text-gray-200 hover:underline py-2 px-2"
                                href="{{'gallery'}}">Gallery</a>
                         </li>
                         <li class="mr-2">
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
+                            <a class="inline-block link_color no-underline hover:text-gray-200 hover:underline py-2 px-2"
+                               href="{{'contact'}}">Contact Us</a>
+                        </li>
+                        <li class="mr-2">
+                            <a class="inline-block link_color no-underline hover:text-gray-200 hover:underline py-2 px-2"
                                href="{{route('login.form')}}">Admin</a>
                         </li>
                     </ul>
@@ -112,7 +116,7 @@
             </div>
         </nav>
 
-        <div class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
+        <div class="brav_bg w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
 
             <!--Lead Card-->
             @if(isset($data['featured']->slug))

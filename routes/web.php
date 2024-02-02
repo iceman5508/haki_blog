@@ -38,6 +38,7 @@ Route::get('/contact', [PublicViewController::class, 'contact'])->name('contact'
 Route::post('/contact', [PublicViewController::class, 'postContact'])->name('contact.post');
 Route::get('/about', [PublicViewController::class, 'about'])->name('about');
 Route::get("/gallery",[GalleryController::class,'index'])->name('gallery');
+Route::get('/why', [PublicViewController::class, 'why'])->name('why');
 
 Route::post("/logout",[LoginController::class,'logout'])->name('logout');
 

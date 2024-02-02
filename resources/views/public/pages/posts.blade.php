@@ -8,7 +8,7 @@
     <meta name="author" content="name">
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
-    @vite(['resources/css/tailwind.css', 'resources/css/animate.css'])
+    @vite(['resources/css/tailwind.css', 'resources/css/animate.css', 'resources/css/app.css'])
     <style>
         .smooth {
             transition: box-shadow 0.3s ease-in-out;
@@ -19,14 +19,14 @@
         }
     </style>
 </head>
-<body class="bg-white font-sans leading-normal tracking-normal">
+<body class="brav_bg font-sans leading-normal tracking-normal">
 
 @include('common.top-nav')
 @include('common.flash')
 
 <!--Title-->
 <div class="text-center pt-16 md:pt-32">
-    <p class="text-sm md:text-base text-green-500 font-bold">Created {{$post->created_at->diffForHumans() }} :   {{date('F jS, Y', strtotime($post->created_at)) }} <span class="text-gray-900">/</span> {{$post->category->name}}</p>
+    <p class="text-sm md:text-base text-black font-bold">Created {{$post->created_at->diffForHumans() }} :   {{date('F jS, Y', strtotime($post->created_at)) }} <span class="text-gray-900">/</span> {{$post->category->name}}</p>
     <h1 class="font-bold break-normal text-3xl md:text-5xl">{{$post->title}}</h1>
 </div>
 
@@ -155,7 +155,7 @@
 </div>
 
 
-<div class="bg-gray-200">
+<div class="brav_bg">
 
     <div class="container w-full max-w-6xl mx-auto px-2 py-8">
         <div class="flex flex-wrap -mx-2">

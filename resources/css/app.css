@@ -3,4 +3,21 @@
 
 }
 
+.brav_bg {
+    /*background-color: #01a5ac;*/
+    background-color: aqua;
+}
 
+
+.link_color {
+    color: white;
+}
+
+.selected_color {
+    color: aqua;
+}
+
+
+.brown {
+    background-color: #784415;
+}
